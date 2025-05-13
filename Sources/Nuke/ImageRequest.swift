@@ -449,7 +449,7 @@ public struct ImageRequest: CustomStringConvertible, Sendable, ExpressibleByStri
 
     var resource: Resource { ref.resource }
 
-    func withProcessors(_ processors: [any ImageProcessing]) -> ImageRequest {
+    public func withProcessors(_ processors: [any ImageProcessing]) -> ImageRequest {
         var request = self
         request.processors = processors
         return request
